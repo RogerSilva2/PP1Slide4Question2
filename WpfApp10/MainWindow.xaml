@@ -1,0 +1,17 @@
+﻿<Window x:Class="WpfApp10.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp10"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Slider Name="TamanhoFonte" Margin="120,170,120,120" Minimum="11" Maximum="48" TickFrequency="1"></Slider>
+        <TextBox Margin="120,50,120,180" FontSize="{Binding Path=Value, ElementName=TamanhoFonte}"></TextBox>
+        <Label Margin="120,230,280,50">Tamanho da fonte:</Label>
+        <Label Margin="230,230,120,50" Content="{Binding Path=Value, ElementName=TamanhoFonte}" />
+        <Button Content="-" Name="Diminuir" Margin="80,170,410,120" Click="Diminuir_Click" />
+        <Button Content="+" Name="Aumentar" Margin="410,170,80,120" Click="Aumentar_Click" />
+    </Grid>
+</Window>
